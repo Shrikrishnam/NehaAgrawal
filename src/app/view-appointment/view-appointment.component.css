@@ -1,0 +1,17 @@
+.Page{
+    float: right;
+    width: 78%;
+    margin-top: 10%;
+}
+th{
+    background-color: rgb(147, 178, 236);
+    font-size: 25px;
+    margin-bottom: 2px;
+}
+th ,td{
+    padding: 4px;
+    text-align: left;
+}
+tr:nth-child(even){
+    background-color: #f2f2f2;
+}

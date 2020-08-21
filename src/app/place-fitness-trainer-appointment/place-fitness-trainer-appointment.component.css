@@ -1,0 +1,12 @@
+.Page{
+    float: right;
+    width: 77%;
+    margin-top: 10%;
+}
+fieldset{
+    border: 1px solid black;
+    padding: 5px;
+}
+label{
+    margin-left: 5px;
+}

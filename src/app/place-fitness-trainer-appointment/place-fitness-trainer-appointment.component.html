@@ -1,0 +1,75 @@
+<div class="Page">
+<form [formGroup]="fitnessForm">
+  <h2 style="text-align: center;margin: 10px;">{{pagetitle}}</h2>
+    <label>
+      Firstname
+      <input type="text" value="firstname" formControlName="firstname" required>
+    </label>
+    <label>
+      Lastname
+      <input type="text" value="lastname" formControlName="lastname" required>
+    </label>
+    <label>Age
+      <input type="number" value="age" formControlName="age" required>
+    </label>
+    <label><br>
+    Phone Number
+      <input type="text" value="phonenumber" formControlName="phonenumber" required>
+    </label>
+    <label>
+        Email ID
+        <input type="email" value="email" formControlName="email" required>
+      </label>
+    <br>
+    <fieldset><legend>Address</legend>
+      <label>
+        Street
+        <input type="" value="address" formControlName="streetaddress" required>
+      </label><br>
+      <label>City
+        <input type="text" value="city" formControlName="city" required>
+      </label>
+      <label>
+        State
+        <input type="text" value="state" formControlName="state" required>
+      </label>
+      <label>
+    Country
+        <input type="text" value="country" formControlName="country" required>
+      </label>
+      <label>
+        Pincode
+        <input type="number" value="pincode" formControlName="pincode" required>
+      </label>
+    </fieldset><br>
+      <label>
+        inr
+        <input type="number" value="inr" formControlName="inr" required>
+      </label>
+      <label>
+        paisa
+        <input type="number" value="paisa" formControlName="paisa" required>
+      </label><br>
+      <label> Trainer Preference
+      <select class="custom-select" formControlName="trainerpreference">
+        <option *ngFor="let pref of preference" [ngValue]="pref">{{pref}}</option>
+     </select>
+    </label>
+    <label>Physiotherepist
+        <div>
+        <input type="radio" value="yes" formControlName="physiotherapist">
+        <label for="yes">Yes</label></div>
+        <div>
+        <input type="radio" value="no" formControlName="physiotherapist">
+        <label for="no">No</label></div>
+    </label><br>
+    <label> Select Package
+        <select class="custom-select" formControlName="packages">
+            <option *ngFor="let pg of packag" [ngValue]="pg">{{pg}}</option>
+         </select>
+    </label><br>
+    <button *ngIf="editb" (click)="editappoint()" >Edit</button>
+      <button *ngIf="!editb" type="submit" (click)="onSubmit()">Place Appointment</button>
+     
+    </form>
+  </div>

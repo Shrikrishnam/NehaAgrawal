@@ -1,0 +1,24 @@
+<div class="Page" style="overflow-x: auto;">
+<table id="users">
+    <tr>
+     <th class=h1>Sl NO</th>
+     <th class=h2>Name</th>
+     <th class=h3>Address</th>
+     <th class=h4>City</th>
+     <th class=h5>Package</th>
+     <th class=h6>Trainer Preference</th>
+     <th class=h7>Phone</th>
+    </tr>
+    <tr *ngFor="let user of users">
+      <td *ngFor="let col of index">
+        {{user[col]}}
+      </td>
+      <td>
+        <button routerLinkActive="active" [routerLink]="['/place-fitness-trainer-appointment', user.id]">Edit</button>
+      </td>
+      <td>
+        <button (click)="deletecust(user.id)">Delete</button>
+      </td>
+    </tr>
+  </table>
+</div>
